@@ -1,0 +1,131 @@
+.reservation, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-position: center;
+    background-color: rgba(210, 113, 29, 0.687);
+    background-image: url(../assets/images/background2.jpg);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header1 h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(245, 242, 239);
+    top: 25px;
+    font-style: italic;
+}
+
+.container {
+    position: relative;
+    width: 1000px;
+    margin: auto;
+}
+
+.inputField button {
+    width: 150px;
+    height: 40px;
+    background-color: #cda782;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.inputField button:hover {
+    background-color: rgb(101, 169, 252);
+}
+
+.inputField {
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #000;
+    background-color: #d2d4dcd8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideInLeft 2.5s ease-out forwards;
+}
+
+.airplane {
+    position: absolute;
+    top: 50%;
+    left: -150px;
+    width: 100px;
+    transform: translateY(-50%);
+    animation: airplaneMove 2.5s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes airplaneMove {
+    to {
+        left: 900px;
+        opacity: 0;
+    }
+}
+
+.form-inline {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.form-inline input {
+    flex: 1;
+    min-width: 300px;
+}
+
+.form-section {
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+.radio-section {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.radio-section label {
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; 
+}

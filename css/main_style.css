@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-position: center;
+  background-color: rgb(241, 244, 247);
+  background-image: url(../assets/images/background2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(5px);
+}
+
+.header1 h1 {
+  width: 100%; 
+  text-align: center;
+  font-size: 60px;
+  color: rgb(245, 242, 239);
+  top: 25px;
+  font-style: italic;
+}
+
+.container {
+  position: relative;
+  width: 500px; 
+  height: auto; 
+  margin: 20px auto;
+}
+
+.inputField {
+  width: 100%; 
+  padding: 20px;
+  border: 2px solid #000;
+  background-color: #d2d4dcd8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInLeft 2.5s ease-out forwards;
+}
+
+.inputField h1 {
+  text-align: center;
+}
+
+.inputField button {
+  width: 150px;
+  height: 40px;
+  background-color: #cda782;  
+  color: rgb(244, 234, 234); 
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: calc(50% - 75px); /* Centering the button */
+}
+
+.inputField button:hover {
+  background-color: rgb(101, 169, 252);
+}
+
+.airplane {
+  position: absolute;
+  top: 50%;
+  left: -150px;
+  width: 100px;
+  transform: translateY(-50%);
+  animation: airplaneMove 2.5s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes airplaneMove {
+  to {
+    left: 900px;
+    opacity: 0;
+  }
+}
+
+.form-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-inline label {
+  width: 100px;
+  font-weight: bold;
+}
+
+.form-inline input, .form-inline select {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#month, #day, #year {
+  width: 120px;
+  height: 35px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
